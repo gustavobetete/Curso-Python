@@ -1,16 +1,48 @@
-# This is a sample Python script.
+# programa de uma calculadora simples
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Somar
+def soma(x, y):
+    return x + y
 
+# Subtrair
+def subtrair(x, y):
+    return x - y
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Multiplicar
+def multiplicar(x, y):
+    return x * y
 
+#Dividir
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def divide(x, y):
+    return x / y
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("Seleciona a operação.")
+print("1. Somar")
+print("2. Subtrair")
+print("3. Multiplicar")
+print("4. Dividir")
+
+while True:
+    # pega resposta do usuario
+    choice = input("Selecione a operação(1/2/3/4): ")
+
+    #Checa qual numero foi selecionado
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Entre com o primeiro numero: "))
+        num2 = float(input("Entre com a segundo numero: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", soma(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtrair(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiplicar(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        break
+    else:
+        print("Numero invalido")
